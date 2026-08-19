@@ -1,0 +1,6 @@
+{
+  "name": "Karsa Bangun Desa",
+  "description": "Lembaga pendampingan masyarakat dan pembangunan ekosistem pedesaan menuju Desa Mandiri berbasis bukti dan kearifan lokal.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
