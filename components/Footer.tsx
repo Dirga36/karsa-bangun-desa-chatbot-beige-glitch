@@ -18,7 +18,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-stone-950 text-stone-300 pt-16 pb-12 border-t border-stone-800">
+    <footer className="bg-stone-950 text-stone-300 pt-16 pb-12 border-t border-stone-800 font-plus">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Main Footer Grid */}
@@ -27,14 +27,14 @@ export default function Footer() {
           {/* Col 1: Institutional Identity */}
           <div className="lg:col-span-5 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-emerald-800 flex items-center justify-center text-amber-400 border border-emerald-700">
-                <Sprout className="w-6 h-6 text-amber-400" />
+              <div className="w-10 h-10 rounded-2xl bg-forest flex items-center justify-center text-amber-300 border border-white/20 shadow-forest">
+                <Sprout className="w-6 h-6 text-amber-300" />
               </div>
               <div>
                 <span className="font-extrabold text-white text-lg tracking-tight">
                   Karsa Bangun Desa
                 </span>
-                <p className="text-xs text-emerald-400 font-semibold">
+                <p className="text-xs text-amber-300 font-bold">
                   Mitra Pendampingan Desa Mandiri
                 </p>
               </div>
@@ -52,7 +52,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram Karsa Bangun Desa"
-                className="p-2 rounded-xl bg-stone-900 text-stone-400 hover:text-amber-400 hover:bg-stone-800 border border-stone-800 transition-colors"
+                className="p-2.5 rounded-full bg-stone-900 text-stone-400 hover:text-amber-300 hover:bg-stone-800 border border-stone-800 transition-colors"
               >
                 <Instagram className="w-4 h-4" />
               </a>
@@ -61,7 +61,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook Karsa Bangun Desa"
-                className="p-2 rounded-xl bg-stone-900 text-stone-400 hover:text-amber-400 hover:bg-stone-800 border border-stone-800 transition-colors"
+                className="p-2.5 rounded-full bg-stone-900 text-stone-400 hover:text-amber-300 hover:bg-stone-800 border border-stone-800 transition-colors"
               >
                 <Facebook className="w-4 h-4" />
               </a>
@@ -70,11 +70,11 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="YouTube Karsa Bangun Desa"
-                className="p-2 rounded-xl bg-stone-900 text-stone-400 hover:text-amber-400 hover:bg-stone-800 border border-stone-800 transition-colors"
+                className="p-2.5 rounded-full bg-stone-900 text-stone-400 hover:text-amber-300 hover:bg-stone-800 border border-stone-800 transition-colors"
               >
                 <Youtube className="w-4 h-4" />
               </a>
-              <span className="text-xs text-stone-500 font-medium">@KarsaBangunDesa</span>
+              <span className="text-xs text-stone-400 font-semibold">@KarsaBangunDesa</span>
             </div>
           </div>
 
@@ -85,32 +85,32 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2 text-xs sm:text-sm text-stone-400">
               <li>
-                <a href="#tentang" className="hover:text-emerald-400 transition-colors">
+                <a href="#tentang" className="hover:text-amber-300 transition-colors">
                   Tentang Lembaga
                 </a>
               </li>
               <li>
-                <a href="#pentahelix" className="hover:text-emerald-400 transition-colors">
+                <a href="#pentahelix" className="hover:text-amber-300 transition-colors">
                   Pilar Kolaborasi Pentahelix
                 </a>
               </li>
               <li>
-                <a href="#layanan" className="hover:text-emerald-400 transition-colors">
+                <a href="#layanan" className="hover:text-amber-300 transition-colors">
                   Master Plan & Koperasi
                 </a>
               </li>
               <li>
-                <a href="#riset" className="hover:text-emerald-400 transition-colors">
+                <a href="#riset" className="hover:text-amber-300 transition-colors">
                   Studi Kasus Bojong Kulur & Riau
                 </a>
               </li>
               <li>
-                <a href="#simulasi-idm" className="hover:text-emerald-400 transition-colors">
+                <a href="#simulasi-idm" className="hover:text-amber-300 transition-colors">
                   Kalkulator Kesiapan IDM
                 </a>
               </li>
               <li>
-                <a href="#kontak" className="hover:text-emerald-400 transition-colors">
+                <a href="#kontak" className="hover:text-amber-300 transition-colors">
                   Pusat Konsultasi
                 </a>
               </li>
@@ -124,11 +124,11 @@ export default function Footer() {
             </h4>
             <div className="space-y-2.5 text-xs text-stone-400">
               <div className="flex items-start gap-2.5">
-                <MapPin className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
+                <MapPin className="w-4 h-4 forest-green shrink-0 mt-0.5 text-emerald-400" />
                 <span>Bojongsoang, Kabupaten Bandung, Jawa Barat, Indonesia</span>
               </div>
               <div className="flex items-start gap-2.5">
-                <Phone className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
+                <Phone className="w-4 h-4 text-amber-300 shrink-0 mt-0.5" />
                 <div className="space-y-0.5">
                   <p>WhatsApp 1: 0857-7000-3549</p>
                   <p>WhatsApp 2: 0852-8000-3548</p>
@@ -145,7 +145,7 @@ export default function Footer() {
                 href="https://wa.me/6285770003549?text=Halo%20Karsa%20Bangun%20Desa,%20saya%20ingin%20konsultasi%20mengenai%20pendampingan%20desa."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-emerald-900 hover:bg-emerald-800 text-emerald-100 text-xs font-semibold border border-emerald-700 transition-colors"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-forest hover:bg-[#166534]/90 text-white text-xs font-bold shadow-md transition-all cursor-pointer"
               >
                 <span>Chat Langsung di WhatsApp</span>
                 <ArrowUpRight className="w-3.5 h-3.5 text-amber-300" />
@@ -160,8 +160,8 @@ export default function Footer() {
           <p>
             © {currentYear} <strong>Karsa Bangun Desa</strong>. Seluruh Hak Cipta Dilindungi.
           </p>
-          <div className="flex items-center gap-2 text-stone-400">
-            <ShieldCheck className="w-4 h-4 text-emerald-600" />
+          <div className="flex items-center gap-2 text-stone-400 font-semibold">
+            <ShieldCheck className="w-4 h-4 text-emerald-500" />
             <span>Pendampingan Berbasis Bukti & Kearifan Lokal</span>
           </div>
         </div>
@@ -170,3 +170,4 @@ export default function Footer() {
     </footer>
   );
 }
+

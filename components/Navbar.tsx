@@ -22,7 +22,7 @@ export default function Navbar() {
   const navLinks = [
     { name: 'Tentang Kami', href: '#tentang' },
     { name: 'Pilar Pentahelix', href: '#pentahelix' },
-    { name: 'Layanan Strategis', href: '#layanan' },
+    { name: 'Layanan', href: '#layanan' },
     { name: 'Landasan Riset', href: '#riset' },
     { name: 'Cek Kesiapan IDM', href: '#simulasi-idm' },
     { name: 'Kontak', href: '#kontak' },
@@ -30,10 +30,10 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 font-plus ${
         isScrolled
-          ? 'bg-white/95 backdrop-blur-md shadow-sm py-3 border-b border-stone-200'
-          : 'bg-stone-50/90 backdrop-blur-xs py-4 border-b border-stone-200/60'
+          ? 'bg-white/85 backdrop-blur-md shadow-soft py-3 border-b border-stone-200/90'
+          : 'bg-[#FAFAF9]/80 backdrop-blur-md py-4 border-b border-stone-200/60'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -42,33 +42,33 @@ export default function Navbar() {
           <a
             href="#"
             id="nav-brand-logo"
-            className="flex items-center gap-3 group focus:outline-hidden"
+            className="flex items-center gap-2.5 group focus:outline-hidden"
           >
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-800 to-emerald-950 flex items-center justify-center text-amber-400 shadow-md group-hover:scale-105 transition-transform duration-200 border border-emerald-700/50">
-              <Sprout className="w-6 h-6 text-amber-400" />
+            <div className="w-9 h-9 bg-forest rounded-xl flex items-center justify-center text-white shadow-sm group-hover:scale-105 transition-transform duration-200">
+              <Sprout className="w-5 h-5 text-amber-300" />
             </div>
             <div>
               <div className="flex items-center gap-1.5">
-                <span className="font-extrabold text-stone-900 tracking-tight text-lg sm:text-xl">
-                  Karsa Bangun Desa
+                <span className="font-extrabold forest-green tracking-tight text-lg sm:text-xl font-plus">
+                  KARSA BANGUN DESA
                 </span>
-                <span className="hidden sm:inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-semibold bg-emerald-100 text-emerald-800 border border-emerald-300">
-                  Mitra Desa Mandiri
+                <span className="hidden sm:inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold bg-[#166534]/10 forest-green border border-[#166534]/20">
+                  Desa Mandiri
                 </span>
               </div>
               <p className="text-[11px] text-stone-500 font-medium tracking-wide flex items-center gap-1">
-                <MapPin className="w-3 h-3 text-emerald-700" /> Bojongsoang, Kab. Bandung
+                <MapPin className="w-3 h-3 text-[#166534]" /> Bojongsoang, Kab. Bandung
               </p>
             </div>
           </a>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden lg:flex items-center gap-1 xl:gap-2">
+          <nav className="hidden lg:flex items-center gap-6 xl:gap-8 font-medium text-sm text-stone-600">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="px-3 py-2 rounded-lg text-sm font-medium text-stone-700 hover:text-emerald-800 hover:bg-emerald-50/70 transition-colors"
+                className="hover:text-[#166534] transition-colors py-1 relative hover:font-semibold"
               >
                 {link.name}
               </a>
@@ -82,7 +82,7 @@ export default function Navbar() {
               href="https://wa.me/6285770003549?text=Halo%20Karsa%20Bangun%20Desa,%20saya%20ingin%20konsultasi%20mengenai%20pendampingan%20desa."
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-emerald-800 text-white hover:bg-emerald-900 font-semibold text-sm shadow-sm hover:shadow transition-all duration-200 border border-emerald-900/20 active:scale-95"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-forest text-white hover:bg-[#166534]/90 font-semibold text-sm shadow-sm hover:shadow-forest transition-all duration-200 active:scale-95"
             >
               <Phone className="w-4 h-4 text-amber-300" />
               <span>Konsultasi Desa</span>
@@ -105,9 +105,9 @@ export default function Navbar() {
 
       {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-white border-b border-stone-200 px-4 pt-3 pb-6 space-y-2 shadow-lg animate-in slide-in-from-top-2">
+        <div className="lg:hidden bg-white/95 backdrop-blur-lg border-b border-stone-200 px-4 pt-3 pb-6 space-y-2 shadow-xl animate-in slide-in-from-top-2">
           <div className="py-2 border-b border-stone-100 mb-2">
-            <p className="text-xs font-semibold text-emerald-800 uppercase tracking-wider">
+            <p className="text-xs font-bold forest-green uppercase tracking-wider">
               Lembaga Pendampingan Desa
             </p>
           </div>
@@ -116,7 +116,7 @@ export default function Navbar() {
               key={link.name}
               href={link.href}
               onClick={() => setMobileMenuOpen(false)}
-              className="block px-3 py-2 rounded-lg text-base font-medium text-stone-800 hover:bg-emerald-50 hover:text-emerald-800 transition-colors"
+              className="block px-3 py-2 rounded-xl text-base font-medium text-stone-800 hover:bg-[#166534]/10 hover:text-[#166534] transition-colors"
             >
               {link.name}
             </a>
@@ -126,13 +126,13 @@ export default function Navbar() {
               href="https://wa.me/6285770003549?text=Halo%20Karsa%20Bangun%20Desa,%20saya%20ingin%20konsultasi%20mengenai%20pendampingan%20desa."
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-emerald-800 text-white font-semibold text-sm shadow-sm"
+              className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 rounded-full bg-forest text-white font-semibold text-sm shadow-md"
             >
               <Phone className="w-4 h-4 text-amber-300" />
               <span>Konsultasi WhatsApp (0857-7000-3549)</span>
             </a>
             <div className="flex items-center justify-center gap-2 text-xs text-stone-500 pt-1">
-              <ShieldCheck className="w-3.5 h-3.5 text-emerald-700" />
+              <ShieldCheck className="w-3.5 h-3.5 text-[#166534]" />
               <span>Pendampingan Berbasis Bukti & Kearifan Lokal</span>
             </div>
           </div>
@@ -141,3 +141,4 @@ export default function Navbar() {
     </header>
   );
 }
+

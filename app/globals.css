@@ -1,9 +1,64 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 
 @layer base {
   html {
     scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    background-color: #FAFAF9;
+    color: #1A1A1A;
   }
 }
+
+.font-plus {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.forest-green {
+  color: #166534;
+}
+
+.bg-forest {
+  background-color: #166534;
+}
+
+.border-forest {
+  border-color: #166534;
+}
+
+.earth-gold {
+  color: #D97706;
+}
+
+.bg-earth {
+  background-color: #D97706;
+}
+
+.border-earth {
+  border-color: #D97706;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(22, 101, 52, 0.12);
+}
+
+.glass-card-dark {
+  background: rgba(26, 26, 26, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.shadow-soft {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+}
+
+.shadow-forest {
+  box-shadow: 0 12px 30px -5px rgba(22, 101, 52, 0.22);
+}
+

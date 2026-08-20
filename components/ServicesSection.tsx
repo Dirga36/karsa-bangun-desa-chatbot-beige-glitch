@@ -26,7 +26,7 @@ export default function ServicesSection() {
       tag: 'Cetak Biru Tata Ruang',
       title: 'Master Plan Desa Wisata & Desa Agro',
       icon: Map,
-      badgeColor: 'bg-emerald-100 text-emerald-900 border-emerald-300',
+      badgeColor: 'bg-forest/10 forest-green border-forest/20',
       shortDesc:
         'Penyusunan dokumen master plan komprehensif berbasis data spasial GIS, daya dukung lingkungan, dan studi kelayakan ekonomi 5-10 tahun.',
       overview:
@@ -61,7 +61,7 @@ export default function ServicesSection() {
       tag: 'Kedaulatan Ekonomi Tani',
       title: 'Koperasi Desa Merah Putih & Rantai Pasok',
       icon: TrendingUp,
-      badgeColor: 'bg-amber-100 text-amber-900 border-amber-300',
+      badgeColor: 'bg-earth/10 earth-gold border-earth/20',
       shortDesc:
         'Sentralisasi rantai pasok komoditas pertanian untuk memutus jerat tengkulak dan mendistribusikan Sisa Hasil Usaha (SHU) kembali ke petani.',
       overview:
@@ -96,7 +96,7 @@ export default function ServicesSection() {
       tag: 'Kapasitas Aparatur & Akuntabilitas',
       title: 'Mentoring APBDes & Indeks Desa Membangun (IDM)',
       icon: Building,
-      badgeColor: 'bg-emerald-100 text-emerald-900 border-emerald-300',
+      badgeColor: 'bg-forest/10 forest-green border-forest/20',
       shortDesc:
         'Audit kapasitas aparatur desa, pemetaan aset komunal terpadu, serta akselerasi skor IDM dari status Berkembang/Maju menuju Desa Mandiri.',
       overview:
@@ -152,16 +152,16 @@ export default function ServicesSection() {
   ];
 
   return (
-    <section id="layanan" className="py-20 lg:py-28 bg-stone-50 border-b border-stone-200">
+    <section id="layanan" className="py-20 lg:py-28 bg-[#FAFAF9] border-b border-stone-200/80 font-plus">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center space-y-4 mb-16">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-emerald-100 text-emerald-900 text-xs font-bold uppercase tracking-wider">
-            <Layers className="w-3.5 h-3.5 text-emerald-800" />
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-forest/10 forest-green text-xs font-bold uppercase tracking-wider border border-forest/20">
+            <Layers className="w-3.5 h-3.5 forest-green" />
             <span>Program & Layanan Unggulan</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-stone-900 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-extrabold forest-green tracking-tight">
             Solusi Menyeluruh untuk Ekosistem Pedesaan Mandiri
           </h2>
           <p className="text-stone-600 text-base sm:text-lg leading-relaxed">
@@ -174,8 +174,8 @@ export default function ServicesSection() {
         <div className="grid lg:grid-cols-12 gap-8 items-start mb-20">
           
           {/* Left Column: Service Selector List */}
-          <div className="lg:col-span-5 space-y-3">
-            <p className="text-xs font-bold uppercase tracking-wider text-stone-500 px-1 mb-2">
+          <div className="lg:col-span-5 space-y-3.5">
+            <p className="text-xs font-bold uppercase tracking-[0.15em] text-stone-400 px-1 mb-2">
               Pilih Pilar Layanan:
             </p>
             {services.map((srv, index) => {
@@ -186,37 +186,37 @@ export default function ServicesSection() {
                   key={srv.id}
                   type="button"
                   onClick={() => setSelectedService(index)}
-                  className={`w-full text-left p-5 rounded-2xl transition-all duration-200 border flex items-start gap-4 ${
+                  className={`w-full text-left p-5 rounded-3xl transition-all duration-200 border flex items-start gap-4 cursor-pointer ${
                     isCurrent
-                      ? 'bg-emerald-900 text-white shadow-lg border-emerald-800 ring-2 ring-emerald-700/50 scale-[1.01]'
-                      : 'bg-white text-stone-800 hover:bg-stone-100 border-stone-200/90'
+                      ? 'bg-forest text-white shadow-forest border-forest ring-2 ring-forest/30 scale-[1.01]'
+                      : 'glass-card text-stone-800 hover:bg-white border-stone-200/90 shadow-soft'
                   }`}
                 >
                   <div
-                    className={`p-3 rounded-xl shrink-0 ${
+                    className={`p-3 rounded-2xl shrink-0 ${
                       isCurrent
-                        ? 'bg-emerald-800 text-amber-300'
-                        : 'bg-emerald-50 text-emerald-800 border border-emerald-200'
+                        ? 'bg-white/20 text-amber-300'
+                        : 'bg-forest/10 forest-green border border-forest/15'
                     }`}
                   >
                     <IconComponent className="w-6 h-6" />
                   </div>
                   <div className="space-y-1">
                     <span
-                      className={`inline-block text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded ${
+                      className={`inline-block text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full ${
                         isCurrent
-                          ? 'bg-emerald-800/90 text-emerald-100'
+                          ? 'bg-black/20 text-amber-200'
                           : 'bg-stone-100 text-stone-600'
                       }`}
                     >
                       {srv.tag}
                     </span>
-                    <h3 className="font-bold text-base leading-snug">
+                    <h3 className="font-extrabold text-base leading-snug">
                       {srv.title}
                     </h3>
                     <p
                       className={`text-xs line-clamp-2 leading-relaxed ${
-                        isCurrent ? 'text-emerald-100/90' : 'text-stone-500'
+                        isCurrent ? 'text-white/80' : 'text-stone-500'
                       }`}
                     >
                       {srv.shortDesc}
@@ -228,19 +228,19 @@ export default function ServicesSection() {
           </div>
 
           {/* Right Column: Detailed Breakdown of Selected Service */}
-          <div className="lg:col-span-7 bg-white rounded-3xl p-6 sm:p-8 shadow-xl border border-stone-200 space-y-6">
+          <div className="lg:col-span-7 glass-card rounded-3xl p-6 sm:p-8 shadow-soft border border-stone-200/90 space-y-6">
             {/* Active Service Header */}
-            <div className="border-b border-stone-100 pb-5 space-y-2">
+            <div className="border-b border-stone-200/60 pb-5 space-y-2">
               <div className="flex items-center justify-between gap-2 flex-wrap">
-                <span className="text-xs font-bold text-emerald-800 bg-emerald-100 px-3 py-1 rounded-full border border-emerald-300">
+                <span className="text-xs font-bold forest-green bg-forest/10 px-3 py-1 rounded-full border border-forest/20">
                   {services[selectedService].tag}
                 </span>
-                <span className="text-xs text-stone-500 font-semibold flex items-center gap-1">
-                  <ShieldCheck className="w-3.5 h-3.5 text-emerald-700" />
+                <span className="text-xs text-stone-500 font-bold flex items-center gap-1">
+                  <ShieldCheck className="w-3.5 h-3.5 forest-green" />
                   Pendampingan Terstruktur
                 </span>
               </div>
-              <h3 className="text-2xl font-extrabold text-stone-900">
+              <h3 className="text-2xl font-extrabold forest-green">
                 {services[selectedService].title}
               </h3>
               <p className="text-sm text-stone-600 leading-relaxed">
@@ -250,25 +250,25 @@ export default function ServicesSection() {
 
             {/* Core Implementation Modules */}
             <div>
-              <h4 className="text-xs font-bold uppercase tracking-wider text-stone-800 mb-3 flex items-center gap-1.5">
-                <Compass className="w-4 h-4 text-emerald-800" />
+              <h4 className="text-xs font-bold uppercase tracking-wider text-stone-700 mb-3 flex items-center gap-1.5">
+                <Compass className="w-4 h-4 forest-green" />
                 <span>Komponen Kerja Utama:</span>
               </h4>
               <div className="grid sm:grid-cols-2 gap-3.5">
                 {services[selectedService].keyPillars.map((item, idx) => (
                   <div
                     key={idx}
-                    className="p-3.5 rounded-xl bg-stone-50 border border-stone-200/80 space-y-1"
+                    className="p-3.5 rounded-2xl bg-white/90 border border-stone-200/80 space-y-1 shadow-xs"
                   >
                     <div className="flex items-center gap-2">
-                      <span className="w-5 h-5 rounded-full bg-emerald-800 text-white flex items-center justify-center text-[10px] font-bold">
+                      <span className="w-5 h-5 rounded-full bg-forest text-white flex items-center justify-center text-[10px] font-bold">
                         {idx + 1}
                       </span>
-                      <h5 className="font-bold text-stone-900 text-xs leading-tight">
+                      <h5 className="font-bold forest-green text-xs leading-tight">
                         {item.title}
                       </h5>
                     </div>
-                    <p className="text-[11px] text-stone-600 leading-relaxed pl-7">
+                    <p className="text-[11px] text-stone-500 leading-relaxed pl-7">
                       {item.desc}
                     </p>
                   </div>
@@ -277,15 +277,15 @@ export default function ServicesSection() {
             </div>
 
             {/* Deliverables / Output */}
-            <div className="p-4 rounded-2xl bg-emerald-50/60 border border-emerald-200 space-y-2">
-              <h4 className="text-xs font-bold uppercase tracking-wider text-emerald-950 flex items-center gap-1.5">
-                <FileCheck className="w-4 h-4 text-emerald-800" />
+            <div className="p-4 rounded-2xl bg-forest/5 border border-forest/15 space-y-2">
+              <h4 className="text-xs font-bold uppercase tracking-wider forest-green flex items-center gap-1.5">
+                <FileCheck className="w-4 h-4 forest-green" />
                 <span>Dokumen & Output Nyata:</span>
               </h4>
               <div className="grid sm:grid-cols-2 gap-2">
                 {services[selectedService].deliverables.map((deliv, idx) => (
                   <div key={idx} className="flex items-center gap-2 text-xs font-medium text-stone-800">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-700 shrink-0" />
+                    <CheckCircle2 className="w-3.5 h-3.5 forest-green shrink-0" />
                     <span>{deliv}</span>
                   </div>
                 ))}
@@ -300,12 +300,12 @@ export default function ServicesSection() {
                 )}.`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-emerald-800 hover:bg-emerald-900 text-white font-bold text-xs shadow-md transition-all duration-200"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-forest hover:bg-[#166534]/90 text-white font-bold text-xs shadow-md transition-all duration-200 cursor-pointer"
               >
                 <span>Konsultasikan Program Ini</span>
                 <ArrowRight className="w-3.5 h-3.5 text-amber-300" />
               </a>
-              <span className="text-xs text-stone-500">
+              <span className="text-xs text-stone-500 font-medium">
                 Penyusunan proposal & Terms of Reference (TOR) gratis
               </span>
             </div>
@@ -315,12 +315,12 @@ export default function ServicesSection() {
         </div>
 
         {/* 4-Stage Methodology Roadmap */}
-        <div className="pt-8 border-t border-stone-200">
+        <div className="pt-8 border-t border-stone-200/80">
           <div className="text-center max-w-2xl mx-auto mb-10 space-y-2">
-            <span className="text-xs font-bold uppercase tracking-wider text-amber-700">
+            <span className="text-xs font-bold uppercase tracking-wider earth-gold">
               Metodologi Pendampingan
             </span>
-            <h3 className="text-2xl font-extrabold text-stone-900">
+            <h3 className="text-2xl font-extrabold forest-green">
               Alur 4 Tahap Menuju Kemandirian Desa
             </h3>
             <p className="text-xs sm:text-sm text-stone-600">
@@ -332,18 +332,18 @@ export default function ServicesSection() {
             {workflowSteps.map((wf, idx) => (
               <div
                 key={idx}
-                className="p-5 rounded-2xl bg-white border border-stone-200 space-y-3 relative group hover:border-emerald-700 transition-colors"
+                className="p-5 rounded-3xl glass-card border border-stone-200/80 space-y-3 relative group hover:border-forest/40 hover:shadow-soft transition-all"
               >
                 <div className="flex items-center justify-between">
-                  <span className="text-2xl font-black text-emerald-800/30 group-hover:text-emerald-800 transition-colors">
+                  <span className="text-2xl font-black text-forest/20 group-hover:text-forest transition-colors">
                     {wf.step}
                   </span>
-                  <span className="w-2.5 h-2.5 rounded-full bg-amber-500" />
+                  <span className="w-2.5 h-2.5 rounded-full bg-earth" />
                 </div>
-                <h4 className="font-bold text-stone-900 text-sm leading-snug">
+                <h4 className="font-bold forest-green text-sm leading-snug">
                   {wf.title}
                 </h4>
-                <p className="text-xs text-stone-600 leading-relaxed">
+                <p className="text-xs text-stone-500 leading-relaxed">
                   {wf.desc}
                 </p>
               </div>
@@ -355,3 +355,4 @@ export default function ServicesSection() {
     </section>
   );
 }
+
