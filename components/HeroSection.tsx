@@ -160,14 +160,6 @@ export default function HeroSection() {
               </div>
             </div>
 
-            {/* Location Tag */}
-            <div className="mt-3 text-center">
-              <span className="inline-flex items-center gap-1.5 text-xs text-stone-500 font-medium">
-                <MapPin className="w-3.5 h-3.5 forest-green" />
-                Sekretariat: Bojongsoang, Kab. Bandung, Jawa Barat
-              </span>
-            </div>
-
           </div>
 
         </div>
