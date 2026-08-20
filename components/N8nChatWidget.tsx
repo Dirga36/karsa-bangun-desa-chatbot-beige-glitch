@@ -38,7 +38,7 @@ export default function N8nChatWidget() {
             ],
             i18n: {
               en: {
-                title: 'Karsa Bangun Desa',
+                title: 'Asisten Karsa Bangun Desa',
                 subtitle: 'Pendamping Digital Desa Mandiri',
                 footer: 'Pendampingan Berbasis Bukti & Kearifan Lokal',
                 getStarted: 'Mulai Percakapan',
