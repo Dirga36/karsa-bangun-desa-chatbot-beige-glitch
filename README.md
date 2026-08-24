@@ -8,8 +8,6 @@
 
 Modern web platform and 24/7 AI-powered digital advisory assistant for **Karsa Bangun Desa**—a strategic rural empowerment institution based in Bojongsoang, Bandung Regency, West Java, Indonesia.
 
-The platform bridges empirical action research, spatial GIS data, fair supply-chain models (*Koperasi Desa Merah Putih*), and local wisdom to assist village officials (*Pemerintah Desa*), BUMDes managers, farmer cooperatives, and Pentahelix partners toward achieving **Desa Mandiri** (Autonomous Village) status.
-
 ---
 
 ## Table of Contents
@@ -27,17 +25,6 @@ The platform bridges empirical action research, spatial GIS data, fair supply-ch
 - [Design Theme & Styling](#design-theme--styling)
 - [Deployment](#deployment)
 - [License & Credits](#license--credits)
-
----
-
-## Overview & Capabilities
-
-**Karsa Bangun Desa** delivers evidence-based frameworks to solve foundational rural development bottlenecks:
-
-1. **Digital Assistant Consultation (24/7)**: Real-time automated guidance answering village queries regarding village regulations (Kemendesa/Kemendagri), APBDes budget harmonization, IDM diagnostics, and cooperative supply-chain workflows.
-2. **Master Plan & Spatial Zoning**: GIS-driven master plan formulation for Agrotourism and Agro-industrial village clusters.
-3. **Red & White Village Cooperatives (*Koperasi Desa Merah Putih*)**: Supply-chain disintermediation models that bypass middle-tier brokers (*tengkulak*) to maximize farmer dividends (*SHU*).
-4. **Indeks Desa Membangun (IDM) Diagnostics**: Assessment tool to analyze Social, Economic, and Environmental Resilience Index indicators.
 
 ---
 
@@ -117,8 +104,8 @@ Before running the application locally, ensure you have:
 
 1. **Clone the repository:**
    ```bash
-   git clone [YOUR_GIT_REPOSITORY_URL]
-   cd [YOUR_PROJECT_DIRECTORY]
+   git clone https://github.com/Dirga36/karsa-bangun-desa-chatbot-beige-glitch
+   cd karsa-bangun-desa-chatbot-beige-glitch
    ```
 
 2. **Install project dependencies:**
@@ -268,7 +255,7 @@ The repository is fully compatible with Vercel zero-configuration deployments:
 
 ---
 
-## License & Credits
+## Credits
 
 - **Institution**: **Karsa Bangun Desa** (Bojongsoang, Kabupaten Bandung, Jawa Barat, Indonesia).
 - **Inquiries & Partnerships**: `karsabangundesa@gmail.com` | WhatsApp: `0857-7000-3549` / `0852-8000-3548`.
