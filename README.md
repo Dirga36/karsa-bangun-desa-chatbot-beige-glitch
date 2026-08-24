@@ -131,14 +131,16 @@ Before running the application locally, ensure you have:
 
 ## Environment Configuration
 
-Create a `.env.local` file at the root of your project:
+Create a `.env.local` (optional) file at the root of your project:
 
 ```env
-# Optional: Google Gemini AI API key (for server-side GenAI features)
+# Google Gemini AI API key (for server-side GenAI features and used by AI Studio if you plan build with AI studio)
 GEMINI_API_KEY=[YOUR_GEMINI_API_KEY]
 
-# Optional: n8n AI Chatbot Webhook URL
-NEXT_PUBLIC_N8N_WEBHOOK_URL="https://[YOUR_N8N_HOST]/webhook/[YOUR_WEBHOOK_ID]/chat"
+# APP_URL: The URL where this applet is hosted.
+# AI Studio automatically injects this at runtime with the Cloud Run service URL.
+# Used for self-referential links, OAuth callbacks, and API endpoints.
+APP_URL="MY_APP_URL"
 ```
 
 > **Security Note:** Never commit `.env.local` or secret keys into version control. Server-side keys must remain private and accessed strictly via `process.env.GEMINI_API_KEY`.
