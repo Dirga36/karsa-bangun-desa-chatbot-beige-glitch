@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Head from "next/head";
 
 export const metadata: Metadata = {
   title: "Karsa Bangun Desa | Mitra Strategis Menuju Desa Mandiri",
   description:
     "Lembaga pendampingan masyarakat dan pembangunan ekosistem pedesaan menuju Desa Mandiri berbasis bukti & kearifan lokal. Master Plan Desa Wisata/Agro, tata kelola BUMDes, & Koperasi Desa.",
+  icons: {
+    icon: "/favicon.ico",
+  },
   openGraph: {
     title: "Karsa Bangun Desa | Mitra Strategis Menuju Desa Mandiri",
     description:
@@ -33,12 +35,8 @@ export default function RootLayout({
           href="https://cdn.jsdelivr.net/npm/@n8n/chat@latest/dist/style.css"
         />
       </head>
-      <body suppressHydrationWarning>
-        <Head>
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
-        {children}
-      </body>
+      <body suppressHydrationWarning>{children}</body>
     </html>
   );
 }
+
